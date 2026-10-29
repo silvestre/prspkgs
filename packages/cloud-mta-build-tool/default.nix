@@ -7,15 +7,15 @@
   fetchFromGitHub
 }: buildGoModule rec {
   pname = "Cloud MTA Build Tool";
-  version = "1.2.49";
+  version = "1.2.50";
 
   src = fetchFromGitHub {
     owner = "SAP";
     repo = "cloud-mta-build-tool";
     rev = "refs/tags/v${version}";
-    hash = "sha256-Se9+21rKMgmJ5tmvFiXQRfCIs/azYzBkNM0Nbibfo4A=";
+    hash = "sha256-vJ6gWz3KLkStDN/M7r7/HN4xI8+hxXmjmqZZ7gG2BwE=";
   };
-  vendorHash = "sha256-vKHMSGncX3NjiS+htqBG+WCZdIRqx0rlsrTV+kfk7R8=";
+  vendorHash = "sha256-c+aqYeAMnUnZzRTLuEcXdlnJmLQs9cKUVzBG23ncDnk=";
 
   ldflags = ["-s" "-w" "-X main.Version=${version}"];
 
